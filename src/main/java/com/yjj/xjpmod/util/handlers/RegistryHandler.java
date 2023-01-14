@@ -1,5 +1,6 @@
 package com.yjj.xjpmod.util.handlers;
 
+import com.yjj.xjpmod.entity.EntityInit;
 import com.yjj.xjpmod.init.ModItems;
 import com.yjj.xjpmod.util.IHasModel;
 
@@ -22,5 +23,15 @@ public class RegistryHandler {
 				((IHasModel)item).registerModels();
 			}
 		}
+	}
+	
+	public static void preInitRegistries()
+	{
+		EntityInit.registerEntities();
+		RenderHandler.registerEntityRenders();
+	}
+	public static void postInitRegistries()
+	{
+		
 	}
 }
